@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+
+    <style>
+
+        .widget {
+            padding: 5px 5px ;
+            color: #000000;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
+
+        }
+
+        div {
+             width: 95%;
+             min-height: 100px;
+
+            background:
+                linear-gradient(to right, black 4px, transparent 4px) 0 0,
+                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+}
+
+     
+    </style>
+</head>
+<body>
+
+    <div class="widget" id="widget"></div>
+
+
+<script>
+
+quotes=[
+"“Obviously, if you don’t love life, you can’t enjoy an oyster.” - Eleanor Clark, The Oysters of Locmariaquer, 1959",
+"“I never approve, or disapprove, of anything now. It is an absurd attitude to take towards life. We are not sent into the world to air our moral prejudices.” - Lord Henry",
+"Thin-lipped wisdom spoke at her from the worn chair, hinted at prudence, quoted from that book of cowardice whose author apes the name of common sense.",
+"“There are many things that we would throw away if we were not afraid that others might pick them up.” - Lord Henry",
+""They have not forbidden sight to your eyes. You see. You are made to see. You see and you know. For yourself. The eyes have not been condemned. You see inspite of. Your sight. Let that be a lesson to you. You see farther. Farther and farther. Beyond what you are made to see and made to see only."",
+"Imagination is one of our most powerful tools. What we imagine, we can become.",
+"What I do here matters. Everybody lives downstream.",
+"We can choose. If all the world is a commodity, how poor we grow. When all the world is a gift in motion, how wealthy we become.",
+];
+
+const INTERVAL = 86400000;
+
+function dispalyQuote(){
+
+    document.getElementById('widget').innerHTML =quotes[0];
+    quotes.forEach((quote, i) => {
+        setTimeout(() => {
+            document.getElementById('widget').innerHTML =quote;
+        }, i * INTERVAL);  
+    });
+    }
+
+    function dispalyWidget() {
+        dispalyQuote();
+        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    }
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>

@@ -1,68 +1,52 @@
-<!-- original : https://codepen.io/SeanNorton/pen/LWBXQL -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quote</title>
 
     <style>
 
-        /*CSS RESETS*/
+        .widget {
+            padding: 5px 5px ;
+            color: #000000;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
 
-body{
-    background-color: #fff;
-    line-height: 1.6;
+        }
 
+        div {
+             width: 95%;
+             min-height: 100px;
+
+            background:
+                linear-gradient(to right, green 4px, transparent 4px) 0 0,
+                linear-gradient(to right, green 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, green 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, green 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, green 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, green 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, green 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, green 4px, transparent 4px) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
 }
 
-h1 {
-    margin-top: 0;
-}
-
-
-/*CSS START*/
-        
-.full-table {
-    display: table;
-    height: 100%;
-    width: 100%;
-}
-
-.table-cell {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.card {
-    padding: 10px 25px 10px 25px;
-    border-radius: 10px;
-    background: #EDF3EC;
-    color: #448361;
-    display: inline-block;
-    box-shadow: 2px 2px 1px 0px #295C7B;
-}
-
-.card:hover {
-    margin-top: 2px;
-    box-shadow: none;
-}
-
-.greet{
-    
-    min-width: 162px;
-    /* padding-right: 30px; */
-    font-family: 'Concert One', cursive;
-    font-size: 1.2em;
-}
-
+     
     </style>
 </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+
 <body>
+
+    <div class="widget" id="widget"></div>
+
 
 <script>
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="randomQuotes()">
+
+    <h1>Hello World!</h1>
+
+    <p id="quote"></p>
+
+    <script>
+    var quotes = ['hi', 'bye', 'lol', 'hello', 'world']
+    function randomQuotes() {
+        var idx = Math.floor(Math.random() * quotes.length)
+        document.getElementById('quote').innerHTML = quotes[idx]
+    }
+    </script>
+
+</body>

@@ -179,7 +179,7 @@
 
             async function updateQuote() {
                 try {
-                    const response = await fetch("https://api.quotable.io/random");
+                    const response = await fetch("https://saman.dev/notion-quote/?f=https://gist.githubusercontent.com/saman/a4326228c01f7fe15de6707655352300/raw/6ae8c92baae70fb842ddf91f3465ccab5f7b1622/my-notion-quote.json");
                     const data = await response.json();
 
                     if (response.ok) {

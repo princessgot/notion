@@ -27,18 +27,13 @@
      
     </style>
 </head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 
-<body>
+<body onload="randomQuotes()">
 
     <div class="widget" id="widget"></div>
 
-
 <script>
-
-quotes=[
+    var quotes = [
     "Obviously, if you don’t love life, you can’t enjoy an oyster.",
     "I never approve, or disapprove, of anything now. It is an absurd attitude to take towards life. We are not sent into the world to air our moral prejudices.",
     "Thin-lipped wisdom spoke at her from the worn chair, hinted at prudence, quoted from that book of cowardice whose author apes the name of common sense.",
@@ -91,24 +86,10 @@ quotes=[
     "and I ask Billy if I should return the difficult phone call, and he says, yes. / Billy's already gone through the frightening door, / whatever he says I'll do.",
     "In people's lives I want to be that which does not hurt. - Maria Tsvetayeva",
 ];
-
-const INTERVAL = 86400000;
-
-function dispalyQuote(){
-
-    document.getElementById('widget').innerHTML =quotes[0];
-    quotes.forEach((quote, i) => {
-        setTimeout(() => {
-            document.getElementById('widget').innerHTML =quote;
-        }, i * INTERVAL);  
-    });
+    function randomQuotes() {
+        var idx = Math.floor(Math.random() * quotes.length)
+        document.getElementById('quote').innerHTML = quotes[idx]
     }
-
-    function dispalyWidget() {
-        dispalyQuote();
-        setTimeout(dispalyWidget, quotes.length*INTERVAL);
-    }
-    dispalyWidget()
 
 </script>
 

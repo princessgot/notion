@@ -1,0 +1,9 @@
+<script language="JavaScript">
+
+<!--
+
+let petNames = ["sparky", "fido", "spots", "fluffy", "muffin"]
+let newName = petNames._pickRandom()
+
+basic.showString(newName)
+//-->

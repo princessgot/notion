@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="quote-container"></div>
+  <script>
+    var r_text = [ 
+      (Triumphantly:) It means that they, as they are right now, could be their future selves’ pasts.";
+
+      Obviously, if you don’t love life, you can’t enjoy an oyster.;
+    
+      I never approve, or disapprove, of anything now. It is an absurd attitude to take towards life. We are not sent into the world to air our moral prejudices.
+
+      Thin-lipped wisdom spoke at her from the worn chair, hinted at prudence, quoted from that book of cowardice whose author apes the name of common sense.
+
+      There are many things that we would throw away if we were not afraid that others might pick them up.
+    ];
+
+    var i = Math.floor(r_text.length * Math.random());
+    document.getElementById('quote-container').innerHTML =
+      '<span style="font-weight:bold; font-size:150%; font-family:Space Mono, monospace;">'
+      + r_text[i] + '</span>';
+  </script>
+</body>
+</html>
